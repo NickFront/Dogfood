@@ -1,0 +1,233 @@
+.wrapper__product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 10px;
+    position: relative;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product__block_team-gray {
+    background-color: #f6f7f9;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    justify-content: flex-start!important;
+    max-width: 360px;
+}
+
+.product__block {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.product__block_left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product__block_left h3 {
+    margin-bottom: 10px;
+}
+
+.product__block_rigth {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.product__block .product__block_left p {
+    text-align: center;
+}
+
+.product__block_flex {
+    display: none;
+}
+
+.product__img {
+    height: 400px;
+}
+
+.product__price {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__price p {
+    font-size: 1.2rem;
+    background-color: #f6f7f9;
+    width: 20%;
+}
+
+.product__price span {
+    color: crimson;
+    font-size: 1.2rem;
+}
+
+.product__price div {
+    font-size: 1.2rem;
+}
+
+.product__add {
+    min-width: 105px;
+    display: flex;
+    gap: 5px;
+    border: solid 0.5px darkgray;
+    border-radius: 26px;
+    cursor: pointer;
+    color: black;
+    height: 36px;
+    font-size: 1.25rem;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.product__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: darkgray;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.product__delete {
+    align-self: flex-start;
+    box-shadow: 0px 1px 6px 1px rgba(34, 60, 80, 0.2);
+}
+
+.product__char {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product__char_row {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 50%;
+    color: darkgray;
+}
+
+.product__char_row::before {
+    border-bottom: 1px dotted darkgray;
+    bottom: 0.2em;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.product__char_row span {
+    background: #fff;
+    display: inline;
+    padding-right: 3px;
+    position: relative;
+}
+
+.product__add-reviews {
+    background-color: transparent;
+    border: 1px solid darkgray;
+    border-radius: 26px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 150px;
+    height: 2rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product__add-reviews:hover {
+    background-color: #f6f7f9;
+}
+
+.modal__reviews {
+    position: fixed;
+    background-color: #fff9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(1px) grayscale(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    max-width: calc(100%-40px);
+    max-height: calc(100%-40px);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 6px 1px rgba(34, 60, 80, 0.2);
+}
+
+.reviews__product {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviews__img {
+    height: 100px;
+}
+
+.reviews textarea {
+    height: 100px;
+    font-size: 1.1rem;
+    resize: none;
+    padding: 10px;
+}
+
+@media (max-width: 1040px) {
+    .product__block {
+        flex-direction: column;
+    }
+
+    .product__block_none {
+        display: none;
+    }
+
+    .product__block_flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product__block_left {
+        width: 100%;
+    }
+
+    .product__price p,
+    .product__add {
+        width: 10%;
+    }
+
+    .product__add {
+        width: 20%;
+        justify-content: space-between;
+    }
+}

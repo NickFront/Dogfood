@@ -1,0 +1,213 @@
+@import url('../src/blocks/product.css');
+@import url('../src/blocks/basket.css');
+
+body {
+  background-color: #fff;
+  color: black;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
+}
+
+main {
+  max-width: 100%;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+  align-self: center;
+}
+
+.container .search-block {
+  grid-column-end: span 4;
+}
+
+.container__title {
+  grid-column-end: span 4;
+}
+
+.container.bs {
+  /* Стиль для бутстрапа */
+  display: block;
+}
+
+.container__pagination {
+  grid-column-end: span 4;
+}
+
+.transition {
+  transition: ease-out 0.2s;
+}
+
+.transition:hover {
+  transform: scale(1.1);
+}
+
+.promo_big {
+  margin-top: -10%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.promo__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.promo__container p {
+  text-align: center;
+  margin: 0;
+}
+
+.promo_none {
+  display: none;
+}
+
+.maxwidth {
+  max-width: 1280px;
+}
+
+.maxwidth_btn {
+  width: 25%;
+}
+
+.font__bold {
+  font-weight: 600;
+}
+
+.font__gray {
+  font-size: 1.5rem;
+  color: darkgray;
+  padding: 10px;
+}
+
+
+.shadow {
+  box-shadow: 0px 1px 6px 1px rgba(34, 60, 80, 0.2);
+}
+
+.carousel {
+  padding: 0 40px;
+}
+
+.btn__gray {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  color: darkgray;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.pay__btn {
+  width: 160px;
+  border: none;
+  outline: none;
+  height: 36px;
+  background-color: #1882cef0;
+  color: black;
+  border-radius: 26px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 36px;
+  box-shadow: 0px 1px 6px 1px rgba(34, 60, 80, 0.2);
+}
+
+.pay__btn_basket {
+  width: 200px;
+}
+
+.pay__btn:hover {
+  background-color: #777;
+}
+
+.pay__btn:disabled {
+  opacity: .6;
+  cursor: default;
+}
+
+hr {
+  width: 100%;
+  color: #d1d3d7;
+  margin: 0 !important;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .main__wrapper {
+    width: 90%;
+  }
+
+  main {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .maxwidth {
+    max-width: 1024px;
+  }
+
+  .promo__container {
+    display: none;
+  }
+
+  .promo_none {
+    display: block;
+    margin-top: 0;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container__pagination,
+  .container__title {
+    grid-column-end: span 3;
+  }
+}
